@@ -1,0 +1,18 @@
+<a
+  (click)="onSelected()"
+  href="#"
+  class="list-group-item list-group-item-action flex-column align-items-start clearfix mb-2"
+>
+  <div class="float-left">
+    <h4>{{ recipe.name }}</h4>
+    <small>{{ recipe.description }}</small>
+  </div>
+  <span class="float-right">
+    <img
+      [src]="recipe.imagePath"
+      [alt]="recipe.description"
+      class="img-fluid"
+      style="max-height: 50px"
+    />
+  </span>
+</a>
