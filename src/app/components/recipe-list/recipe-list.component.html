@@ -7,7 +7,6 @@
 <div class="row mt-4">
   <div class="col-12">
     <app-recipe-item
-      (recipeSelected)="onRecipeSelected(recipeEl)"
       [recipe]="recipeEl"
       *ngFor="let recipeEl of recipes"
     ></app-recipe-item>
