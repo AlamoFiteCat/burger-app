@@ -10,6 +10,7 @@ export class RecipeService {
   recipeSelected = new EventEmitter<Recipe>();
   recipes: Recipe[] = [
     new Recipe(
+      '0',
       'Omelette du Fromage',
       'Eggs lmao',
       'https://www.canalvie.com/polopoly_fs/1.8675792.1547744085!/image/Omelette%20fromage.jpg_gen/derivatives/cvlandscape_499_281/Omelette%20fromage.jpg',
@@ -21,6 +22,10 @@ export class RecipeService {
 
   getRecipes() {
     return [...this.recipes];
+  }
+
+  getRecipeById(id: number) {
+    return this.recipes[id];
   }
 
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
