@@ -21,6 +21,10 @@ export class RecipeDetailComponent implements OnInit {
     });
   }
 
+  onDeleteRecipe() {
+    this._rs.deleteRecipe(this.id);
+  }
+
   onAddToShoppingList(ingredients: Ingredient[]) {
     this._rs.addIngredientsToShoppingList(ingredients);
   }
